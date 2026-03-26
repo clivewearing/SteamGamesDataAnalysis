@@ -1,10 +1,12 @@
 # SteamGamesDataAnalysis
 
-DATABASE DOWNLOADED FROM KAGGLE (https://www.kaggle.com/datasets/waddahali/top-1000-steam-games-20242026/data)
-Top 1000 Steam Games (2024–2026)
+##DATABASE DOWNLOADED FROM KAGGLE (https://www.kaggle.com/datasets/waddahali/top-1000-steam-games-20242026/data)
+
+###Top 1000 Steam Games (2024–2026)
+
 A comprehensive, analysis-ready dataset of the top 1,000 best-selling and most-played games on Steam, scraped in March 2026. It combines data from the Steam Storefront API, store-page scraping, and the SteamSpy API into a single clean CSV with 12 structured columns.
 
-What's Inside
+What's Inside  
 1,000 games — the top sellers on Steam, with release dates spanning 2006–2026 (majority from 2024–2026).
 Pricing data — current USD price and active discount percentage, including Free-to-Play titles.
 Review metrics — positive review percentage and total review count.
