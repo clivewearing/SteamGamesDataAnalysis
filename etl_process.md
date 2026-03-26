@@ -31,3 +31,10 @@ Date
 Year  
 Month  
 Quarter  
+
+
+### SQL Queries  
+CREATE TABLE FactSteam AS   
+  SELECT AppID, Primary_Genre, Release_Date, Price_USD, Discount_Pct, Review_Score_Pct, Total_Reviews, Estimated_Owners, "24h_Peak_Players" AS Peak_Players_24h  
+FROM steam_games_2026  
+
