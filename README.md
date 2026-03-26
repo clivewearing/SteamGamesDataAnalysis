@@ -1,8 +1,8 @@
 # SteamGamesDataAnalysis
 
-**DATABASE DOWNLOADED FROM KAGGLE (https://www.kaggle.com/datasets/waddahali/top-1000-steam-games-20242026/data)**
+## **DATABASE DOWNLOADED FROM KAGGLE (https://www.kaggle.com/datasets/waddahali/top-1000-steam-games-20242026/data)**
 
-## Top 1000 Steam Games (2024–2026)
+### Top 1000 Steam Games (2024–2026)
 
 A comprehensive, analysis-ready dataset of the top 1,000 best-selling and most-played games on Steam, scraped in March 2026. It combines data from the Steam Storefront API, store-page scraping, and the SteamSpy API into a single clean CSV with 12 structured columns.
 
@@ -13,8 +13,16 @@ Review metrics — positive review percentage and total review count.
 Community tags — up to 10 user-defined tags per game (e.g., Open World, Multiplayer, Pixel Graphics).
 Steam Deck compatibility — Verified, Playable, Unsupported, or Unknown.
 Player estimates — estimated owners via the Boxleiter Method (Total Reviews × 30) and 24-hour peak concurrent players from SteamSpy.
-Columns
-Column	Type	Description
+
+
+| Column | Type | Description |
+|-------|----------|----------|
+| Action | 25 | 78 |
+| RPG    | 30 | 82 |
+| Indie  | 15 | 75 |
+
+Columns  
+Column    Type	  Description
 AppID	int	Unique Steam application ID
 Name	str	Full game title
 Release_Date	date	Official release date (YYYY-MM-DD)
