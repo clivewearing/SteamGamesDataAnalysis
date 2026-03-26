@@ -1,6 +1,7 @@
 # SteamGamesDataAnalysis
 
 ## **DATABASE DOWNLOADED FROM KAGGLE (https://www.kaggle.com/datasets/waddahali/top-1000-steam-games-20242026/data)**
+Credits to: https://www.kaggle.com/waddahali
 
 ### Top 1000 Steam Games (2024–2026)
 
