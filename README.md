@@ -17,9 +17,9 @@ Player estimates — estimated owners via the Boxleiter Method (Total Reviews ×
 
 | Column | Type | Description |
 |-------|----------|----------|
-| Action | 25 | 78 |
-| RPG    | 30 | 82 |
-| Indie  | 15 | 75 |
+| AppID | int | Unique Steam application ID |
+| Name    | str | Full game title |
+| Release_Date  | date | Official release date (YYYY-MM-DD) |
 
 Columns  
 Column    Type	  Description
