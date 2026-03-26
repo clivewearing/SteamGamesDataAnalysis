@@ -21,11 +21,7 @@ Player estimates — estimated owners via the Boxleiter Method (Total Reviews ×
 | Name    | str | Full game title |
 | Release_Date  | date | Official release date (YYYY-MM-DD) |
 
-Columns  
-Column    Type	  Description
-AppID	int	Unique Steam application ID
-Name	str	Full game title
-Release_Date	date	Official release date (YYYY-MM-DD)
+...  
 Primary_Genre	str	First genre listed (Action, Indie, RPG, etc.)
 All_Tags	str	Up to 10 semicolon-separated community tags
 Price_USD	float	Current price in USD (0.00 = Free to Play)
@@ -34,23 +30,26 @@ Review_Score_Pct	int	% of positive reviews (0–100)
 Total_Reviews	int	Total user reviews
 Steam_Deck_Status	str	Deck compatibility (Verified / Playable / Unsupported / Unknown)
 Estimated_Owners	int	Estimated owners (Total Reviews × 30)
-24h_Peak_Players	int	Peak concurrent players in last 24h (SteamSpy)
-How It Was Collected
-Data was collected via a custom Python scraper using a multi-source pipeline:
+24h_Peak_Players	int	Peak concurrent players in last 24h (SteamSpy)  
+
+### How It Was Collected
+Data was collected via a custom Python scraper using a multi-source pipeline:  
 
 AppID Discovery — Crawled the Steam store "Top Sellers" page to compile ~1,000 unique AppIDs.
 Steam API — Queried the Storefront API for official metadata (name, price, genre, reviews).
 Store-Page Scraping — Parsed user-defined tags and Steam Deck compatibility from each game's public store page.
 SteamSpy API — Retrieved 24-hour peak concurrent player counts.
 Cleaning — Dropped rows with missing names, cast types, removed duplicates, calculated estimated owners, and sorted by review count.
-Use Cases
-Price prediction — Predict Price_USD from genre, tags, and review metrics.
+
+### Use Cases  
+
 NLP / tag clustering — Discover latent game groupings via TF-IDF or embeddings on All_Tags.
 Genre success analysis — Which genres have the best review-to-ownership ratio?
 Hidden gem detection — Surface under-priced, highly-reviewed games.
 Steam Deck readiness — Analyse which game types earn "Verified" status.
 Time-series exploration — Track how the top-seller landscape shifts year-over-year.
-Acknowledgements
-Valve Corporation—for the Steam platform and public APIs.
-SteamSpy (Sergey Galyonkin) — for the concurrent-player data endpoint.
-Boxleiter Method—industry heuristic estimating owners as Total Reviews × 30.
+
+### Acknowledgements   
+Valve Corporation—for the Steam platform and public APIs.   
+SteamSpy (Sergey Galyonkin) — for the concurrent-player data endpoint.   
+Boxleiter Method—industry heuristic estimating owners as Total Reviews × 30.   
