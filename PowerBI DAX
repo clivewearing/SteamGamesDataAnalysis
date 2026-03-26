@@ -1,0 +1,19 @@
+### Data Table restricted by release data
+  
+  
+Date = 
+VAR MinYear = YEAR (
+    MIN (
+        FactSteam[Release_Date]))
+VAR MaxYear = YEAR (
+    MAX (
+        FactSteam[Release_Date]))
+RETURN
+FILTER (
+    CALENDARAUTO(), 
+    YEAR([Date]) >= MinYear &&
+    YEAR([Date]) <= MaxYear
+)
+
+
+
