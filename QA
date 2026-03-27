@@ -1,0 +1,22 @@
+SELECT * 
+  FROM FactSteam 
+  WHERE AppID IS NULL;
+  
+SELECT Price_USD, COUNT(*) 
+FROM FactSteam 
+GROUP BY AppID 
+HAVING COUNT(*) > 1;
+  
+SELECT FS.AppID
+FROM FactSteam FS
+LEFT JOIN DimSteamName N ON FS.AppID = N.AppID
+WHERE N.AppID IS NULL;
+  
+SELECT * 
+  FROM steam_games_2026 
+  WHERE Release_Date > DATE('now');
+  
+SELECT 
+  COUNT(AppID) AS TotalGames,
+  SUM(Price_USD) AS TotalRevenue
+FROM steam_games_2026;
