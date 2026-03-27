@@ -24,17 +24,15 @@ Player estimates — estimated owners via the Boxleiter Method (Total Reviews ×
 | AppID | int | Unique Steam application ID |
 | Name    | str | Full game title |
 | Release_Date  | date | Official release date (YYYY-MM-DD) |
-
-...  
-Primary_Genre	str	First genre listed (Action, Indie, RPG, etc.)
-All_Tags	str	Up to 10 semicolon-separated community tags
-Price_USD	float	Current price in USD (0.00 = Free to Play)
-Discount_Pct	int	Active discount % at time of scrape (0–95)
-Review_Score_Pct	int	% of positive reviews (0–100)
-Total_Reviews	int	Total user reviews
-Steam_Deck_Status	str	Deck compatibility (Verified / Playable / Unsupported / Unknown)
-Estimated_Owners	int	Estimated owners (Total Reviews × 30)
-24h_Peak_Players	int	Peak concurrent players in last 24h (SteamSpy)  
+|Primary_Genre	|str	|First genre listed (Action, Indie, RPG, etc.)|
+|All_Tags	|str	|Up to 10 semicolon-separated community tags|
+|Price_USD	|float	|Current price in USD (0.00 = Free to Play)|
+|Discount_Pct	|int	|Active discount % at time of scrape (0–95)|
+|Review_Score_Pct	|int	|% of positive reviews (0–100)|
+|Total_Reviews	|int	|Total user reviews|
+|Steam_Deck_Status	|str	|Deck compatibility (Verified / Playable / Unsupported / Unknown)|
+|Estimated_Owners	|int	|Estimated owners (Total Reviews × 30)|
+|24h_Peak_Players	|int	|Peak concurrent players in last 24h (SteamSpy)  |
 
 ### How It Was Collected
 Data was collected via a custom Python scraper using a multi-source pipeline:  
