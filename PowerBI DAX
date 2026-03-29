@@ -16,4 +16,21 @@ FILTER (
 )
 
 
+### Weighted Review
+--In order to weight the reviews based on the number of the reviews
+  
+WeightedReview = 
+VAR C = CALCULATE(
+    AVERAGE(FactSteam[Total_Reviews]);
+    ALL(FactSteam)
+)
+VAR GlobalAvg = CALCULATE(
+    AVERAGE(FactSteam[Review_Score_Pct]);
+    ALL(FactSteam)
+)
+RETURN
+DIVIDE(
+    (AVERAGE(FactSteam[Review_Score_Pct]) * SUM(FactSteam[Total_Reviews])) + (GlobalAvg * C);
+    SUM(FactSteam[Total_Reviews]) + C
+)
 
