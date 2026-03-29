@@ -1,4 +1,4 @@
-### Data Table restricted by release data
+//Data Table restricted by release data
   
   
 Date = 
@@ -16,8 +16,8 @@ FILTER (
 )
 
 
-### Weighted Review
---In order to weight the reviews based on the number of the reviews
+//Weighted Review
+//In order to weight the reviews based on the number of the reviews
   
 WeightedReview = 
 VAR C = CALCULATE(
