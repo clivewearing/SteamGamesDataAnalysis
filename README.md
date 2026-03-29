@@ -45,11 +45,11 @@ Cleaning — Dropped rows with missing names, cast types, removed duplicates, ca
 
 ### Use Cases  
 
-NLP / tag clustering — Discover latent game groupings via TF-IDF or embeddings on All_Tags.
-Genre success analysis — Which genres have the best review-to-ownership ratio?
-Hidden gem detection — Surface under-priced, highly-reviewed games.
-Steam Deck readiness — Analyse which game types earn "Verified" status.
-Time-series exploration — Track how the top-seller landscape shifts year-over-year.
+NLP / tag clustering — Discover latent game groupings via TF-IDF or embeddings on All_Tags.   
+Genre success analysis — Which genres have the best review-to-ownership ratio?  
+Hidden gem detection — Surface under-priced, highly-reviewed games.  
+Steam Deck readiness — Analyse which game types earn "Verified" status.  
+Time-series exploration — Track how the top-seller landscape shifts year-over-year.  
 
 ### Acknowledgements   
 Valve Corporation—for the Steam platform and public APIs.   
