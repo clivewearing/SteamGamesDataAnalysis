@@ -1,4 +1,4 @@
--- Exemplar of the R script used for K-means clusting analysis
+# Exemplar of the R script used for K-means clusting analysis
 
 df <- dataset[, c("AppID", "Price_USD", "Total_Reviews", "Review_Score_Pct")]
 
