@@ -1,0 +1,22 @@
+-- Exemplar of the R script used for K-means clusting analysis
+
+df <- dataset[, c("AppID", "Price_USD", "Total_Reviews", "Review_Score_Pct")]
+
+df$Price_USD        <- as.numeric(df$Price_USD)
+df$Total_Reviews    <- as.numeric(df$Total_Reviews)
+df$Review_Score_Pct <- as.numeric(df$Review_Score_Pct)
+
+# Filtra righe con dati spuri — almeno 1 review e score > 0
+df_clean <- df[df$Total_Reviews > 0 & df$Review_Score_Pct > 0, ]
+df_clean <- na.omit(df_clean)
+
+# Scala
+df_scaled <- scale(df_clean[, c("Price_USD", "Total_Reviews", "Review_Score_Pct")])
+
+# K-means
+set.seed(42)
+km <- kmeans(df_scaled, centers = 4, nstart = 25)
+
+df_clean$Cluster <- as.character(km$cluster)
+
+dataset <- df_clean
